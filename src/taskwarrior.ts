@@ -29,4 +29,7 @@ export class Taskwarrior {
   public async task_info_by_uuid(uuid: string): Promise<string> {
     return this.task(uuid,"info");
   }
+  public async add(description: string): Promise<string> {
+    return this.task("add", description);
+  }
 }

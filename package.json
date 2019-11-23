@@ -16,8 +16,9 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.helloWorld",
-        "title": "Hello World"
+        "command": "taskwarrior.taskadd",
+        "title": "task add",
+        "category": "Taskwarrior"
       }
     ],
     "languages": [

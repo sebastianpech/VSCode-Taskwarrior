@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Taskwarrior",
+  "patterns": [
+    {
+      "include": "#property"
+    },
+    {
+      "include": "#comment"
+    }
+  ],
+  "repository": {
+    "property": {
+      "begin": "^  ([\\w ]*):([^\\n]*)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.property.taskwarrior"
+		}
+      },
+      "end": "\\n"
+    },
+    "comment": {
+      "patterns": [
+        {
+          "begin": "#",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.taskwarrior"
+            }
+          },
+          "end": "\\n",
+          "name": "comment.line.number-sign.taskwarrior"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.taskwarrior"
+}
